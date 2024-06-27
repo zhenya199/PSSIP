@@ -1,0 +1,103 @@
+.main-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(26, 26, 26);
+
+}
+
+:root{
+    --col:rgb(134, 134, 134);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 1%;
+    background-color: rgb(232, 239, 246);
+}
+.heart{
+    position:relative;
+    z-index: 1;
+    top: -210px;
+    right: -260px;
+}
+
+.title-1{
+    margin-bottom: 3%;
+    font-size: 1.5rem;
+}
+
+.price-box{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.3rem;
+
+}
+
+.price{
+    color: red;
+    font-weight: 600;
+}
+.unln-price{
+    text-decoration: line-through;
+    color: var(--col);
+}
+.discount{
+    color: var(--col);
+    border: 1px solid var(--col);
+    padding: 1% 2% 1%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.size{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2% 0px;
+}
+.size-cnt,.size-cnt-2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 1.1rem;
+    
+}
+.size-box-1,.size-box-2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.box-s-1{
+    color: var(--col);
+}
+.size-box-2{
+
+    padding: 1%;
+}
+
+.size-cnt-2{
+    width: 50%;
+}
+
+.btn-card{
+    margin: 5% 0px;
+    width: 100%;
+    border: none;
+    color: aliceblue;
+    background-color: rgba(64, 64, 64, 1);
+    padding: 3%;
+    &:hover{
+        background-color: black;
+    }
+}
+
+.tov{
+    display: flex;
+    justify-content: center;
+    color: var(--col);
+}

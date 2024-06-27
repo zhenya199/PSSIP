@@ -1,0 +1,66 @@
+body{
+    background-color: bisque;
+}
+#red-dots{
+    text-decoration-style: dotted;
+    text-decoration-color: red;
+    text-decoration-line: underline;    
+}
+.photo {
+    width: 250px; /* Ширина фотографии */
+    height: 250px; /* Высота фотографии */
+    border: 2px solid #333; /* Граница фотографии */
+    border-radius: 10px; /* Закругление углов */
+    box-shadow: 5px 5px 5px #888; /* Тень фотографии */
+}
+div{
+    background-color: #ffe6e6; /* Светло-розовый фон рамки */
+    border: 2px solid #ff99cc; /* Рамка толщиной 2px и цвета светло-розового */
+    padding: 10px; /* Отступ внутри рамки */
+    font-family: 'Times New Roman', Times, serif; /* Шрифт Times New Roman */
+    font-size: 20px; /* Размер шрифта 20px */
+    
+}
+h2{
+    color: red;
+}
+ul {
+    list-style-type: square; /* Тип маркера списка */
+    margin-left: 20px; /* Отступ слева */
+    padding-left: 20px; /* Внутренний отступ слева */
+    font-size: 20px; /* Размер шрифта */
+    color: #1d20d1; /* Цвет текста */
+}
+ol {
+    list-style-type: decimal; /* Тип нумерации списка */
+    margin-left: 20px; /* Отступ слева */
+    padding-left: 20px; /* Внутренний отступ слева */
+    font-size: 20px; /* Размер шрифта */
+    color: #1d20d1; /* Цвет текста */
+}
+audio{
+    width: 300px;
+    background-color: #27c722;
+    padding: 14px;
+    border-radius: 10px;
+}
+i{
+    color:#c9136e;
+    font-size: 30px;
+}
+label {
+    display: inline-block;
+    font-size: 16px;
+    color: blue;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+label:hover {
+    background-color: #e0e0e0;
+    color: #555;
+}

@@ -1,0 +1,114 @@
+html{
+    font-size: 12px;
+}
+
+.main-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(246, 246, 246, 1);
+    font-weight: 600;
+}
+
+.form-cnt-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(246, 246, 246, 1);
+    width: 70vw;
+    height: 20vh;
+    font-size: clamp(0.738rem, -0.25rem + 2.2vw, 2.125rem);
+
+}
+
+.form-cnt-1 h1,p{
+    margin: 0%;
+}
+
+
+.form-cnt-2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    width: 70vw;
+    background-color: rgba(246, 246, 246, 1);
+    margin-bottom: 20px;
+
+}
+.box-str{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 1rem;
+}
+
+input[type="text"]{
+    width: 100%;    
+    height: clamp(0.925rem, 0rem + 2vw, 2.25rem);
+    font-size: clamp(0.538rem, -0.25rem + 2.2vw, 2.125rem);
+}
+.box-1, .box-2, .box-3{
+        display: flex;
+    align-items: center;
+}
+.box-1{
+    justify-content: flex-end;
+    width: 20%;
+    font-size: clamp(0.538rem, -0.25rem + 2.2vw, 2.125rem);
+    padding-right: 3%;
+}
+.box-2{
+    width: 40%;
+
+}
+.box-3{
+    width: 30%;
+    font-size: clamp(0.468rem, -0.65rem + 2.2vw, 1.225rem);
+    padding-left: 3%;
+}
+.red::after{
+    content: "*";
+    color: red;
+}
+.form-cnt-3{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 70vw;
+    height: 5vh;
+    background-color: rgba(246, 246, 246, 1);
+}
+
+.btn{
+    border: none;
+    color: aliceblue;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: rgba(226, 161, 53, 1);
+    font-size: clamp(0.638rem, -0.25rem + 2.2vw, 2.125rem);
+}
+
+@media (max-width:800px){
+    .form-cnt-1{
+        height: 12vh;
+    }
+}
+
+
+@media (max-width:400px){
+    .box-1{
+        font-size: 6px;
+    }
+    .form-cnt-2{
+        margin-bottom: 0;
+    }
+    .form-cnt-1{
+        height: 10vh;
+    }
+}

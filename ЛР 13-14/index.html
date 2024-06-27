@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style-form.css">
+</head>
+<body>
+    <p>Берней Евгений Вячеславович</p>
+    <a href="https://classroom.google.com/">Мой любимый сайт</a>
+    <img id="imageElement" onmouseover="showWelcome();" onmouseout="hideWelcome()" src="photo.jpg" alt="" width="400px" height="300px" >
+
+    <div class="main-2">
+        <form class="form-cnt">
+            <div class="form-cnt-1">
+                <h1>Заполните форму заказа</h1>
+                <p>и мы свяжемся с Вами для уточнения деталей в ближайшее время</p>
+            </div>
+            <div class="form-cnt-2">
+                <div class="box-str">
+                    <div class="box-1 red">Введите имя</div>
+                    <div class="box-2"><input class="inp-1" name="login" type="text"  placeholder="Иван Иванович"></div>
+                    <div class="box-3">Как Вам было бы приятно, чтобы к Вам обращались наши менеджеры</div>
+                </div>
+                <div class="box-str">
+                    <div class="box-1 red">Телефон</div>
+                    <div class="box-2"><input class="inp-1" name="password" type="text"  placeholder="+375 () ___ __ __"></div>
+                    <div class="box-3">По этому номеру с вами свяжется менеджер, чтобы уточнить детали заказа</div>
+                </div>
+                <div class="box-str">
+                    <div class="box-1 red">Email</div>
+                    <div class="box-2"><input class="inp-1" name="text" type="text" placeholder="ivan@mail.ru"></div>
+                    <div class="box-3">На данный email мы вышлем подробную информацию о вашем заказе</div>
+                </div>
+                <div class="box-str">
+                    <div class="box-1">Адрес</div>
+                    <div class="box-2"><input class="inp-1" name="text" type="text" placeholder="Гродно"></div>
+                    <div class="box-3">Адрес по кторому будет осуществлена доставка</div>
+                </div>
+                <div class="box-str">
+                    <div class="box-1">Комментарий</div>
+                    <div class="box-2"><input type="text"></div>
+                    <div class="box-3">Ваши пожелания и комментарии к заказу</div>
+                </div>
+            </div>
+            <div class="form-cnt-3">
+                <button class="btn">Оформить заказ</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginForm = document.querySelector(".form-cnt");
+            const loginInput = document.querySelector(".inp-1[name='login']");
+            const passwordInput = document.querySelector(".inp-1[name='password']");
+        
+            loginForm.addEventListener("submit", function(event) {
+                event.preventDefault(); // Отменяем отправку формы
+        
+                // Проверка на обязательное заполнение полей
+                if (!loginInput.value.trim() || !passwordInput.value.trim()) {
+                    alert("Заполните оба поля!");
+                    return;
+                }
+        
+                // Проверка на длину пароля (пример: минимальная длина 6 символов)
+                const minLength = 9;
+                const maxLength = 12;
+        
+                if (passwordInput.value.length < minLength) {
+                    alert(`Пароль должен содержать не менее ${minLength} символов.`);
+                    return;
+                }
+                if (passwordInput.value.length > maxLength) {
+                    alert(`Пароль должен содержать не более ${maxLength} символов.`);
+                    return;
+                }
+        
+                // Дополнительные проверки формата данных можно добавить здесь
+        
+                // Если все проверки пройдены, можно отправить форму
+                loginForm.submit();
+            });
+            
+        });
+        
+        document.querySelector(".inp-1[name='login']").addEventListener('input', function() {
+            // Удаляем все символы, кроме кириллицы, пробелов и дефисов
+            this.value = this.value.replace(/[^А-Яа-яЁё -]/g, '');
+        
+            // Убираем пробелы и дефисы в начале и конце значения
+            this.value = this.value.trim();
+        
+            // Приводим первую букву к верхнему регистру, остальные к нижнему
+            this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1).toLowerCase();
+        });
+        
+        document.querySelector('input[name="password"]').addEventListener('input', function() {
+            // Удаляем все символы, кроме цифр
+            this.value = this.value.replace(/\D/g, '');
+          
+            // Убираем пробелы в начале и конце значения
+            this.value = this.value.trim();
+          
+            // Ограничиваем длину значения до 12 цифр
+            if (this.value.length > 12) {
+              this.value = this.value.slice(0, 12);
+            }
+          });
+          
+
+    </script>
+</body>
+</html>

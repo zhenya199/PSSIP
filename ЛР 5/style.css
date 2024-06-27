@@ -1,0 +1,60 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: flex;
+}
+
+.main {
+    flex-direction: column;
+    background-color: rgb(228, 166, 166);
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.c1, .c2,.c3,.c4,.c5,.c6 {
+    height: 150px;
+}
+
+.c11 {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(117, 117, 117);
+    margin: 10px;
+}
+
+.c21 {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(117, 117, 117);
+    margin: 10px;
+}
+.c22{
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(117, 117, 117);
+    margin: 10px;
+    background-image: url('unnamed.jpg');
+    background-size: cover;
+}
+
+.c31, .c41,.c42,.c51,.c52,.c61,.c62{
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(117, 117, 117);
+    margin: 10px;
+}
+
+.c41 {
+    width: 100%;
+}
+
+.head, .end {
+    background-color: #ff0000;
+    padding: 15px;
+    color: black;
+    height: 100px;
+}

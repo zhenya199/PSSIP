@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .heart {
+                color: red;
+                font-size: 24px;
+                display: none;
+                position: absolute;
+            }
+    
+            #myImage {
+                transition: transform 0.5s;
+            }
+            </style>
+    </head>
+<body>
+
+<h2>Laba_9 po PSSIP</h2>
+ <h1>Примеры с операторами</h1>
+ <h3>Пример с оператором if</h3>
+ <script> 
+    var now = new Date();
+    var hours = now.getHours();
+    
+    if (hours < 12) {
+       document.write("Доброе утро!");
+    } else if (hours >= 12 && hours < 17) {
+        document.write("Добрый день!");
+    } else {
+        document.write("Доброй ночи!");
+    }
+</script>
+<h3>Пример с оператором switch</h3>
+<script>
+    function getCurrentSeason() {
+    var currentDate = new Date();
+    var currentMonth = currentDate.getMonth() + 1; // Месяцы в JavaScript нумеруются с 0, поэтому добавляем 1
+    var seasonMessage = "";
+
+    switch (currentMonth) {
+        case 12:
+        case 1:
+        case 2:
+            seasonMessage = "Зима - время праздников и подарков";
+            break;
+        case 3:
+        case 4:
+        case 5:
+            seasonMessage = "Весна самая прекрасная пора";
+            break;
+        case 6:
+        case 7:
+        case 8:
+            seasonMessage = "Лето - пора отдыха и развлечений, но не для программистов из политеха";
+            break;
+        case 9:
+        case 10:
+        case 11:
+            seasonMessage = "Осень - дождливая и мрачная";
+            break;
+        default:
+            seasonMessage = "Некорректный месяц";
+            break;
+    }
+
+    document.write(seasonMessage);
+}
+getCurrentSeason();
+</script>
+<h3>Пример с оператором for</h3>
+<script>
+    // Функция для создания таблицы умножения
+function createMultiplicationTable() {
+    document.write("<h2>Таблица умножения</h2>");
+    document.write("<table border='1'>");
+    
+    for (var i = 1; i <= 10; i++) {
+        document.write("<tr>");
+        for (var j = 1; j <= 10; j++) {
+            document.write("<td>" + i + " x " + j + " = " + (i * j) + "</td>");
+        }
+        document.write("</tr>");
+    }
+    
+    document.write("</table>");
+}
+
+// Вызов функции для создания таблицы умножения
+createMultiplicationTable();
+</script>
+<h3>Пример с операторам while</h3>
+<p><b>Вывод чисел от 0 до 4</b></p>
+<script>
+let count = 0;
+while (count < 5) {
+  document.write(count);
+  count++;
+}
+</script>
+<h3>Пример с оператором while...do</h3>
+<p>вывод до тех пор пока не выведется число 5</p>
+<script>
+    let number;
+do {
+  number = Math.floor(Math.random() * 10);
+  document.write(number);
+} while (number !== 5);
+</script>
+<h3>Пример с оператором break</h3>
+<p><b>Цикл суммирует массив пока не получится число 5</b></p>
+<script>
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 5) {
+    break; // прерываем цикл, если текущее число больше 5
+  }
+  sum += numbers[i];
+}
+document.write(sum);
+</script>
+<h3>Пример с оператором contiune</h3>
+<p><b>Вывод только нечетных чисел от 1 до 9</b></p>
+<script>
+for (let i = 0; i < 10; i++) {
+  if (i % 2 === 0) {
+    continue; // пропускаем четные числа
+  }
+  document.write(i); // выводим только нечетные числа
+}
+</script>
+<h3>Пример с оператором return</h3>
+<p><b>Вывод 10 раундомных чисел из массива от 10 до 100</b></p>
+<script>
+function generateRandomArray(length, max) {
+  return Array.from({ length: length }, () => Math.floor(Math.random() * max));
+}
+
+const randomArray = generateRandomArray(10, 100); // создаем массив из 10 элементов с числами от 0 до 99
+document.write(randomArray);
+</script>
+<h1>Нажмите на фотографию</h1>
+    <img src="messi.jpg" id="myImage" style="width: 280px; height: 320px; cursor: pointer;">
+    <div class="heart">❤️</div>
+
+    <script>
+        let rotation = 0;
+    
+        // Обработчик события при клике на фотографию
+        document.getElementById("myImage").addEventListener("click", function() {
+            rotation += 360;
+            document.getElementById("myImage").style.transform = "rotate(" + rotation + "deg)";
+        });
+    </script>
+
+    <script>
+        // Функция для отображения сердечек
+        function showHearts() {
+            let hearts = document.getElementsByClassName("heart");
+            for (let heart of hearts) {
+                heart.style.display = "block";
+                let x = Math.random() * window.innerWidth;
+                let y = Math.random() * window.innerHeight;
+                heart.style.top = y + "px";
+                heart.style.left = x + "px";
+            }
+        }
+
+        // Обработчик события при клике на фотографию
+        document.getElementById("myImage").addEventListener("click", function() {
+            // Пример с alert()
+            alert("Привет! Это сообщение с помощью alert()");
+
+            // Пример с confirm()
+            let result = confirm("Вы уверены, что хотите продолжить?");
+            if (result) {
+                alert("Вы нажали 'ОК'");
+            } else {
+                alert("Вы нажали 'Отмена'");
+            }
+
+            // Пример с prompt()
+            let name = prompt("Введите ваше имя:", "Гость");
+            if (name != null) {
+                alert("Привет, " + name + "!");
+            } else {
+                alert("Вы не ввели имя.");
+            }
+
+            // Показываем сердечки
+            showHearts();
+        });
+    </script>
+
+<script>
+    // Функция для отображения сердечек
+    function showHearts() {
+        let hearts = document.getElementsByClassName("heart");
+        for (let heart of hearts) {
+            heart.style.display = "block";
+            let x = Math.random() * window.innerWidth;
+            heart.style.top = "0px";
+            heart.style.left = x + "px";
+            let animation = heart.animate([
+                { top: "0px" },
+                { top: window.innerHeight + "px" }
+            ], {
+                duration: Math.random() * 3000 + 2000,
+                iterations: 1,
+                easing: "ease-out"
+            });
+            animation.onfinish = function() {
+                heart.style.display = "none";
+            };
+        }
+    }
+
+    // Обработчик события при клике на фотографию
+    document.getElementById("myImage").addEventListener("click", function() {
+        // Показываем сердечки
+        for (let i = 0; i < 10; i++) {
+            let heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "❤️";
+            document.body.appendChild(heart);
+        }
+        showHearts();
+    });
+</script>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Berney</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+    @keyframes blink {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: purple; }
+}
+h1 {
+    animation: blink 1s infinite;
+}
+.bluewave {
+  text-decoration-style: wavy;
+  text-decoration-color: blue;
+  text-decoration-line: overline;
+}
+table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 3px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            background-color: #fff;
+        }
+
+        td[rowspan], td[colspan] {
+            font-weight: bold;
+        }
+  </style>
+</head>
+<body>
+<center>  
+<h1 class="bluewave"> Портфолио Берней</h1>
+</center>
+<h2 id="red-dots">Информация обо мне</h2>
+<img src="./photo/photopart.jpg" alt="Мое фото" class="photo">
+<br> 
+<br> 
+<div>Меня зовут Евгений, Я родился в городе Гродно, учусь в Политехническом колледже и работаю, увлекаюсь футболом и киберспортом</div>
+<h2>
+    Мои Хобби
+</h2>
+<ul>
+    <li><u>Футбол</u></li>
+    <li><u>Учеба</u></li>
+    <li><u>Путешествия</u></li>
+  </ul>
+<h2>
+    Мои <i>любимые блюда</i>
+</h2>
+<ol>
+    <li>Мясо по-французки с сыром</li>
+    <li>Гречка без сыра</li>
+    <li>Карбонара</li>
+</ol>
+<h2>Мой любимый трек</h2>
+<audio controls>
+    <source src="audio/EZ4ENCE.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио элемент.
+  </audio>
+  <h2>Мой 2 любимый трек</h2>
+  <audio controls>
+    <source src="audio/Vosxod.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио элемент.
+  </audio>
+  <h2>Ну и последний</h2>
+  <audio controls>
+    <source src="audio/ooes.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио элемент.
+  </audio>
+  <h2>Мой любимый филльм</h2>
+  <br>
+  <i>Моим самым любимым сериалом является "Молодежка" и вот его трейлер</i>
+  <br>
+  <video width="420" height="340" controls>
+    <source src="video/Molodezhka.mp4" type="video/mp4">
+    Ваш браузер не поддерживает элемент video.
+  </video>
+  <h2>Пример добавления таблиц</h2>
+  <table border="1">
+    <tr>
+      <td rowspan="2">Ячейка 1</td>
+      <td colspan="2">Ячейка 2</td>
+    </tr>
+    <tr>
+      <td>Ячейка 3</td>
+      <td>Ячейка 4</td>
+    </tr>
+  </table>
+  <h2>Пример формы регистрации</h2>
+  <table>
+    <tr>
+      <td>Фамилия:</td>
+      <td><input type="text" name="lastname"></td>
+    </tr>
+    <tr>
+      <td>Имя:</td>
+      <td><input type="text" name="firstname"></td>
+    </tr>
+    <tr>
+      <td>Отчество:</td>
+      <td><input type="text" name="middlename"></td>
+    </tr>
+    <tr>
+      <td>Год рождения:</td>
+      <td><input type="text" name="birthdate"></td>
+    </tr>
+    <tr>
+      <td>Город проживания:</td>
+      <td><input type="text" name="city"></td>
+    </tr>
+    <tr>
+      <td>Почтовый индекс:</td>
+      <td><input type="text" name="postcode"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="submit" value="Отправить"></td>
+    </tr>
+  </table>
+  <br>
+  <label for="cars">Список моих любимых автомобилей</label>
+    <select id="cars" name="cars">
+        <option value="Porsche">Porsche</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Audi">Audi</option>
+    </select>
+  <br>
+  <br>
+  <button onclick="window.location.href='page2.html'">Перейти на вторую страницу</button>
+  <h2><u>Ссылки на мои соц.сети</u></h2>
+  <ol>
+  <a href="https://www.instagram.com/_w0rf1/?hl=ru" target="_blank">
+    Перейти в мой Instagram
+  </a>
+  <br>
+  <a href="https://github.com/zhenya199" target="_blank">
+    Мой Github
+  </a>
+  </ol>
+  <h2>Добавление спецсимоволов</h2>
+  <ul>
+    <p>&copy; 2024 w0rf1_site</p>
+    <p>Разработчик &#8594; Берней Евгений Вячеславович</p>
+  </ul>
+  <section>
+    <h2>Заголовок раздела</h2>
+    <p>Люблю маму</p>
+</section>
+</body>
+</html>

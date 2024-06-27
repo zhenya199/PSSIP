@@ -1,0 +1,129 @@
+body, html {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px; 
+  height: 98vh;
+}
+
+.full-width, .half-width, .eighth-width, .fourth-width {
+  display: grid;
+  align-items: center; 
+  justify-content: center; 
+  padding: 20px;
+}
+
+.full-width {
+  grid-column: 1 / -1; 
+  background-color: rgb(255, 0, 0);
+  padding: 20px;
+  text-align: center;
+}
+
+.half-width {
+  grid-column: auto / span 1;
+  background-color: rgb(241, 193, 193);
+  text-align: center;
+}
+
+.ff{
+  margin-left: -50px;
+}
+
+.one{
+  grid-column: auto / span 4;
+  background-color: rgb(53, 123, 209);
+}
+
+.two {
+  grid-column: auto / span 2;
+  background-color: rgb(241, 193, 193);
+}
+
+.eighth-width {
+  grid-column: span 1; 
+  background-color: rgb(15, 212, 15);
+  padding: 20px;
+  text-align: center;
+}
+
+.fourth-width {
+  grid-column: span 2; 
+  background-color: rgb(207, 236, 207);
+  padding: 20px;
+  text-align: center;
+}  
+
+@media (max-width:700px){
+  .ff{
+    margin-left: 0;
+  }
+  .half-width {
+    grid-column: auto / span 2;
+    background-color: rgb(241, 193, 193);
+    text-align: center;
+  }
+
+  .one{
+    grid-column: auto / span 4;
+    background-color: rgb(53, 123, 209);
+  }
+  
+  .two {
+    grid-column: auto / span 2;
+    background-color: rgb(241, 193, 193);
+  }
+
+  .eighth-width {
+    grid-column: span 2; 
+    background-color: rgb(15, 212, 15);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .fourth-width {
+    grid-column: span 4; 
+    background-color: rgb(207, 236, 207);
+    padding: 20px;
+    text-align: center;
+  }  
+}
+
+@media (max-width:400px){
+  .ff{
+    margin-left: 0;
+  }
+  .half-width {
+    grid-column: auto / span 4;
+    background-color: rgb(241, 193, 193);
+    text-align: center;
+  }
+
+  .one{
+    grid-column: auto / span 4;
+    background-color: rgb(53, 123, 209);
+  }
+  
+  .two {
+    grid-column: auto / span 4;
+    background-color: rgb(241, 193, 193);
+  }
+
+  .eighth-width {
+    grid-column: span 4; 
+    background-color: rgb(15, 212, 15);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .fourth-width {
+    grid-column: span 4; 
+    background-color: rgb(207, 236, 207);
+    padding: 20px;
+    text-align: center;
+  }  
+}

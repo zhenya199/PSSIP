@@ -1,0 +1,20 @@
+h2{
+    color: red;
+}
+ul {
+    list-style-type: square; /* Тип маркера списка */
+    margin-left: 20px; /* Отступ слева */
+    padding-left: 20px; /* Внутренний отступ слева */
+    font-size: 20px; /* Размер шрифта */
+    color: #1d20d1; /* Цвет текста */
+}
+ol {
+    list-style-type: decimal; /* Тип нумерации списка */
+    margin-left: 20px; /* Отступ слева */
+    padding-left: 20px; /* Внутренний отступ слева */
+    font-size: 20px; /* Размер шрифта */
+    color: #1d20d1; /* Цвет текста */
+}
+body{
+    background-color: bisque;
+}
